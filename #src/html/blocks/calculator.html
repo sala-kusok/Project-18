@@ -1,0 +1,77 @@
+
+<section class="calculator section">
+    <div class="calculator__wrap wrapper">
+        <h2 class="calculator__title">Расчитайте стоимость ремонта</h2>
+        <div class="calculator__box">
+            <div class="calculator__img">
+                <picture>
+                    <source media="(min-width:1024px)" srcset="img/calculator-desktop.png">
+                    <img src="img/calculator.png" alt="Картинка">
+                </picture>
+            </div>
+            <div class="calculator__form form">
+                <form class="form__box" action="#" method="post">
+                    <fieldset class="form__group">
+                        <legend class="form__name">Тип здания:</legend>
+                        <div class="form__wrap">
+                            <div class="form__radio">
+                                <input id="new" type="radio" name="building" value="new" checked>
+                                <label for="new">Новостройка</label>
+                            </div>
+                            <div class="form__radio">
+                                <input id="old" type="radio" name="building" value="old">
+                                <label for="old">Вторичка</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__group">
+                        <legend class="form__name">Местонахождение:</legend>
+                        <div class="form__wrap">
+                            <div class="form__radio">
+                                <input id="tambow" type="radio" name="location" value="tambow" checked>
+                                <label for="tambow">Тамбов</label>
+                            </div>
+                            <div class="form__radio">
+                                <input id="region" type="radio" name="location" value="region">
+                                <label for="region">Область</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__group">
+                        <legend class="form__name">Тип ремонта:</legend>
+                        <div class="form__wrap">
+                            <div class="form__radio">
+                                <input id="kosmetik" type="radio" name="remont" value="kosmetik" checked>
+                                <label for="kosmetik">Косметический</label>
+                            </div>
+                            <div class="form__radio">
+                                <input id="capital" type="radio" name="remont" value="capital">
+                                <label for="capital">Капитальный</label>
+                            </div>
+                            <div class="form__radio">
+                                <input id="designer" type="radio" name="remont" value="designer">
+                                <label for="designer">Дизайнерский</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__group">
+                        <legend class="form__name">Площадь м2:</legend>
+                        <div class="form__wrap">
+                            <div class="form__input">
+                                <input class="form__square" aria-label="Площадь помещения" type="number" name="square" min="1" max="1000" placeholder="68">
+                            </div>
+                            <div class="form__range">
+                                <output>1</output>
+                                <input aria-label="Площадь помещения" type="range" name="square" min="1" max="1000" step="1" value="1">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form__wrap">
+                        <button class="form__btn">Расчитать</button>
+                        <p class="form__result">Результат <span>1 000 000</span> &#8381;</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

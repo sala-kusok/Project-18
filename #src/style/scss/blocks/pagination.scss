@@ -1,0 +1,106 @@
+.pagination{
+  display: none;
+}
+
+
+@media (min-width: 1024px) {
+
+  .pagination{
+    display: block;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 99;
+
+
+    .pagination__box{
+      list-style: none;
+      padding: 0 10px 0 0;
+      margin: 0 0 20px 0;
+      counter-reset: list;
+    }
+
+    .pagination__item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: px-to-rem(12px);
+      line-height: px-to-rem(14px);
+      color: $white;
+
+      &::before{
+        counter-increment: list;
+        content: "0" counter(list);
+        display: inline-block;
+        margin: 0 10px 0 0;
+        opacity: 0;
+      }
+    }
+
+    .pagination__item.active{
+
+      &::before{
+        opacity: 1;
+      }
+
+      .pagination__link{
+        width: 5px;
+        height: 5px;
+        border: none;
+        background-color: $white;
+        margin: 0 2px;
+        cursor: default;
+      }
+
+    }
+
+    .pagination__link{
+      display: block;
+      width: 10px;
+      height: 10px;
+      box-sizing: border-box;
+      border-radius: 50%;
+      border: 1px solid $primary-circle-hover;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .pagination__scroll{
+      display: block;
+      appearance: none;
+      background-color: $white;
+      border: none;
+      padding: 25px 11px 60px 11px;
+      box-sizing: border-box;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+      cursor: pointer;
+      border-radius: 5px;
+
+      img{
+        display: block;
+        margin: 0 auto 0 auto;
+      }
+
+      span{
+        display: block;
+        font-size: px-to-rem(12px);
+        line-height: px-to-rem(14px);
+        transform: rotate(-90deg);
+        text-align: left;
+        margin-top: 25px;
+      }
+    }
+
+  }
+
+  .fp-viewing-lastPage {
+
+    .pagination__scroll{
+      visibility: hidden;
+    }
+
+  }
+
+}

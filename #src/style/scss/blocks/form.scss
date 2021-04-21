@@ -1,0 +1,265 @@
+
+.form{
+
+  .form__box{
+
+  }
+
+  .form__group{
+    border: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .form__name{
+    font-size: px-to-rem(14px);
+    line-height: px-to-rem(16px);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .form__wrap{
+
+  }
+
+  .form__radio{
+    margin: 7px 0;
+
+    input{
+      display: none;
+
+      &:checked {
+
+        + label {
+
+          &::before {
+            content: "";
+            width: 8px;
+            height: 3px;
+            border-left: 2px solid $primary;
+            border-bottom: 2px solid $primary;
+            position: absolute;
+            left: 3px;
+            top: 8px;
+            transform: rotate(-45deg);
+            z-index: 1;
+          }
+
+        }
+
+      }
+    }
+
+    label{
+      font-size: px-to-rem(17px);
+      line-height: px-to-rem(24px);
+      position: relative;
+      padding-left: 25px;
+      cursor: pointer;
+      display: inline-block;
+
+      &::after {
+        width: 16px;
+        height: 16px;
+        border: 1px solid $primary;
+        box-sizing: border-box;
+        content: "";
+        background-color: transparent;
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .form__input{
+    
+  }
+
+  .form__square{
+    background-color: transparent;
+    display: block;
+    width: 290px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: px-to-rem(14px);
+    line-height: px-to-rem(16px);
+    color: $white;
+    padding: 12px 0;
+  }
+
+  .form__range{
+    display: none;
+
+    output{
+
+    }
+
+    input{
+
+    }
+  }
+
+  .form__btn{
+    @include btn(){
+      width: 290px;
+    };
+  }
+
+  .form__result{
+    text-align: center;
+    font-size: px-to-rem(17px);
+    line-height: px-to-rem(24px);
+    margin: 20px 0;
+  }
+
+}
+
+@media (min-width: 480px) {
+
+  .form{
+
+    .form__wrap{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .form__radio{
+      flex: 0 0 auto;
+      margin-right: 25px;
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+
+    .form__btn{
+      width: 164px;
+      margin-right: 25px;
+    }
+
+    .form__result {
+      text-align: left;
+      font-size: px-to-rem(14px);
+      line-height: px-to-rem(16px);
+      margin: 0;
+      align-self: center;
+    }
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .form{
+
+    .form__box{
+      background-color: $black;
+      border-radius: 5px;
+      padding-top: 5px;
+      padding-bottom: 25px;
+      padding-left: 120px;
+      margin-left: -100px;
+
+    }
+
+    .form__input{
+      display: none;
+    }
+
+    .form__range{
+      display: flex;
+      align-items: center;
+      flex: 0 0 100%;
+      margin-top: 7px;
+      margin-bottom: 7px;
+      background-color: $black;
+
+      input{
+        width: 280px;
+        height: 8px;
+        flex-basis: 280px;
+        appearance: none;
+        background-color: $black;
+        outline: none;
+
+        &::-webkit-slider-runnable-track {
+          background-color: $white;
+          width: 100%;
+          height: 4px;
+          cursor: pointer;
+          border-radius: 10px;
+          box-sizing: border-box;
+        }
+
+        &::-moz-range-track {
+          background-color: $white;
+          width: 100%;
+          height: 4px;
+          cursor: pointer;
+          border-radius: 10px;
+          box-sizing: border-box;
+        }
+
+        &::-ms-track {
+          background-color: $white;
+          width: 100%;
+          height: 4px;
+          cursor: pointer;
+          border-radius: 10px;
+          box-sizing: border-box;
+        }
+
+        &::-webkit-slider-thumb {
+          width: 8px;
+          height: 8px;
+          background-color: $primary;
+          border-radius: 8px;
+          cursor: pointer;
+          appearance: none;
+          margin-top: -2px;
+        }
+
+        &::-moz-range-thumb {
+          width: 8px;
+          height: 8px;
+          background-color: $primary;
+          border-radius: 8px;
+          cursor: pointer;
+          appearance: none;
+          margin-top: -2px;
+        }
+
+        &::-ms-thumb {
+          width: 8px;
+          height: 8px;
+          background-color: $primary;
+          border-radius: 8px;
+          cursor: pointer;
+          appearance: none;
+          margin-top: -2px;
+        }
+
+      }
+
+      output{
+        background-color: transparent;
+        display: block;
+        width: 67px;
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+        font-size: px-to-rem(14px);
+        line-height: px-to-rem(16px);
+        color: $white;
+        padding: 3px 0;
+        margin-right: 24px;
+      }
+    }
+
+  }
+}
